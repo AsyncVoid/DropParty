@@ -1,0 +1,28 @@
+author: Async
+description: Drop parties.
+name: DropParty
+main: me.Async.DP.Main
+version: 0.1
+commands:
+    dropparty:
+        description: Main command
+        aliases: dp
+        permission: dropparty.main
+        usage: Try /<command> help
+
+permissions:
+    dropparty.*:
+        description: Gives access to all DropParty commands
+        children:
+            dropparty.main: true
+            dropparty.create: true
+            dropparty.force: true
+    dropparty.main:
+        default: false
+        description: Gives access to /dropparty command
+    dropparty.create:
+        default: false
+        description: Gives access to the creation of drop zones
+    dropparty.force:
+        default: false
+        description: Gives access to the forcing of drop parties
